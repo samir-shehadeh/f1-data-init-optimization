@@ -9,6 +9,8 @@ track centerline. They are sorted into the split used for the released model
 | `split_01/train/` | cota, hungaroring, imola, interlagos, jeddah, melbourne, montreal, monza, sakhir, shanghai, silverstone, singapore, spa, spielberg |
 | `split_01/test/` | baku, barcelona, mexico (never seen by the released model) |
 
+![The 17 tracks, each with a 1 km scale bar](../assets/tracks.png)
+
 ## Columns
 
 | column | unit | meaning |
@@ -30,10 +32,17 @@ telemetry and can cross the track edges in places.
 2. `scripts/align_track.py` cleans the laps, aligns them to the track centerline, averages their lateral offsets
    into one raceline and resamples to 2 m.
 
+![Alignment of raw F1 telemetry to the track, from the initial pose to the final fit](../assets/alignment.png)
+
 See [`scripts/README.md`](../scripts/README.md) for both commands. The published files were made with an earlier,
 more detailed version of this pipeline.
 
 ## Data sources and disclaimer
+
+![The two data sources: F1 driver telemetry and track geometry](../assets/data_sources.png)
+
+*Logos are those of the FastF1 project, the Technical University of Munich, and Assetto Corsa (Kunos Simulazioni),
+and identify the source of each data stream; no affiliation or endorsement is implied. Photograph from Pexels.*
 
 - **Telemetry:** the expert racelines (`d_m`) were derived from Formula 1 position telemetry accessed with the
   open-source [FastF1](https://github.com/theOehrly/Fast-F1) library (MIT), which retrieves it from the F1 live

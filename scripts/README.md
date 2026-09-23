@@ -21,6 +21,8 @@ python scripts/predict.py --track data/split_01/test/barcelona.csv --mode recurs
   raceline_y_m`, and with `--plot` a PNG of the track and the predicted line. If the track has `d_m`, the mean
   distance to it is printed.
 
+![predict.py --plot on Barcelona, a track the released model never saw](../assets/prediction_barcelona.png)
+
 ## train.py
 
 Trains a new model on the tracks in [`configs/train.yaml`](../configs/README.md).

@@ -6,6 +6,10 @@ This repository contains the official implementation for the paper:
 Samir Shehadeh, Lukas Kutsch, Nils Dengler, Sicong Pan, Maren Bennewitz  
 [arXiv:2603.07126](https://arxiv.org/abs/2603.07126)
 
+![Overview of the method](assets/overview.png)
+
+*Formula 1 photograph from Pexels.*
+
 ## Overview
 
 Trajectory optimization is a key component of autonomous racing, but practical minimum-time optimization pipelines can be highly sensitive to the initial trajectory. Poor initialization, such as using the track centerline or purely geometric baselines, may lead to slow convergence or suboptimal local solutions.
@@ -37,6 +41,8 @@ The full pipeline consists of three main stages:
 
 3. **Minimum-time trajectory optimization**  
    The predicted raceline is used as an informed initialization for a physics-based minimum-time optimal control solver.
+
+![Network architecture](assets/architecture.png)
 
 ## Install
 
@@ -77,6 +83,7 @@ python scripts/align_track.py --track data/split_01/train/monza.csv --telemetry 
 | [`scripts/`](scripts/README.md) | `predict.py`, `train.py`, `download_telemetry.py`, `align_track.py` |
 | [`f1init/`](f1init/README.md) | geometry, alignment, dataset and model code used by the scripts |
 | [`configs/`](configs/README.md) | training configuration |
+| [`assets/`](assets/README.md) | images used in the READMEs |
 
 ## Not included yet
 
@@ -105,4 +112,4 @@ The code is released under the [MIT License](LICENSE). For the data sources and 
 
 ## Contact
 
-For questions, please open an issue once the repository is public or contact the authors directly.
+For questions, please open an issue or contact the authors directly.
